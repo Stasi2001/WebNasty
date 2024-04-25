@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" xmlns:th="http://www.w3.org/1999/xhtml">
+    <title>Котовый список</title>
+</head>
+<body>
+<h1>Котовый список</h1>
+<ul>
+    <th:block th:each="cat : ${cats}">
+        <li>
+            ID: <span th:text="${cat.id}"></span>,
+            Имя: <span th:text="${cat.name}"></span>,
+            Цвет: <span th:text="${cat.color}"></span>,
+            Возраст: <span th:text="${cat.age}"></span>
+        </li>
+    </th:block>
+</ul>
+</body>
+</html>
